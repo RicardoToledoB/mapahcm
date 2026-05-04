@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa HCM - Responsive Producción</title>
+<style>
+body{margin:0;font-family:sans-serif;background:#f4f8fc;}
+header{padding:10px;background:#0a1628;color:white;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.map{height:80vh;display:flex;align-items:center;justify-content:center;background:#e8eef4}
+.route-info{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:white;padding:10px 20px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+@media(max-width:640px){
+header{flex-direction:column;align-items:flex-start}
+.route-info{width:90%}
+}
+</style>
+</head>
+<body>
+<header>
+<div>Hospital Clínico Magallanes</div>
+<div>Modo ☀️🌙 | 🚌 | A+</div>
+</header>
+
+<div class="map">
+<h2>Mapa Interactivo (Demo Responsive)</h2>
+</div>
+
+<div class="route-info">
+<strong>Ruta directa:</strong> Siga la ruta marcada
+</div>
+
+</body>
+</html>
