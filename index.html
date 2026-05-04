@@ -218,9 +218,212 @@ body.day-mode{--navy:#f0f4f8;--navy-mid:#e0e8f0;--navy-li:#d0dce8;--teal:#006860
 .ip-portal-a:hover{background:rgba(0,180,170,.2)}
 .ip-rights-a{display:flex;align-items:center;gap:6px;margin-top:10px;padding:7px 0;border-top:1px solid var(--bdr);font-size:.68em;color:var(--silver);text-decoration:none}
 .ip-rights-a:hover{color:var(--teal)}
+
+
+/* === MEJORA MODO DÍA / ADULTO MAYOR ===
+   Mantiene el modo noche como predeterminado (luna 🌙) y mejora la lectura en modo día. */
+body.day-mode{
+  --navy:#f7fafc;
+  --navy-mid:#ffffff;
+  --navy-li:#e9f1f7;
+  --teal:#005f59;
+  --teal-dim:#004a45;
+  --gold:#8a6500;
+  --white:#0b1f33;
+  --silver:#27394a;
+  --plat:#102235;
+  --red:#b42318;
+  --bdr:rgba(11,31,51,.22);
+  --bdrt:rgba(0,95,89,.34);
+  background:#f7fafc;
+  color:#102235;
+}
+body.day-mode header{
+  background:linear-gradient(135deg,#ffffff,#e8f1f8);
+  border-bottom:2px solid rgba(0,95,89,.35);
+  box-shadow:0 2px 14px rgba(11,31,51,.14);
+}
+body.day-mode .hdr-logo{filter:drop-shadow(0 2px 5px rgba(0,95,89,.22))}
+body.day-mode .hdr-main,
+body.day-mode .ip-name,
+body.day-mode .tp-title{color:#0b1f33}
+body.day-mode .hdr-sub,
+body.day-mode .sb-hd,
+body.day-mode .entry-title,
+body.day-mode .leg-t,
+body.day-mode .tp-sh{color:#005f59}
+body.day-mode .hdr-cr span:first-child{color:#33475b}
+body.day-mode .sr-row,
+body.day-mode .filter-row,
+body.day-mode .tabs,
+body.day-mode .sidebar{
+  background:#ffffff;
+  border-color:rgba(11,31,51,.18);
+}
+body.day-mode .sb{
+  background:#ffffff;
+  border:2px solid rgba(11,31,51,.26);
+  box-shadow:0 2px 8px rgba(11,31,51,.08);
+}
+body.day-mode .sb:focus-within{
+  background:#ffffff;
+  border-color:#005f59;
+  box-shadow:0 0 0 4px rgba(0,95,89,.16);
+}
+body.day-mode .sb input{color:#0b1f33;font-weight:600}
+body.day-mode .sb input::placeholder{color:#536878;opacity:1}
+body.day-mode .tab,
+body.day-mode .filter-chip,
+body.day-mode .a11y-btn,
+body.day-mode .theme-btn,
+body.day-mode .lang-btn{
+  color:#27394a;
+  background:#ffffff;
+  border:1.5px solid rgba(11,31,51,.24);
+}
+body.day-mode .tab.active,
+body.day-mode .filter-chip.active,
+body.day-mode .lang-btn.active,
+body.day-mode .a11y-btn.on{
+  color:#003f3b;
+  background:#dff5f2;
+  border-color:#005f59;
+  font-weight:800;
+}
+body.day-mode .map-area{
+  background:radial-gradient(ellipse at 35% 35%,#ffffff,#eef5fa 72%,#dfeaf2);
+}
+body.day-mode .map-area::before{
+  background-image:linear-gradient(rgba(0,95,89,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(0,95,89,.08) 1px,transparent 1px);
+}
+body.day-mode .fp svg > rect:first-of-type,
+body.day-mode svg rect[fill="rgba(15,32,64,0.6)"]{
+  fill:rgba(255,255,255,.86)!important;
+  stroke:rgba(0,95,89,.38)!important;
+}
+body.day-mode .room>rect{
+  filter:saturate(1.1) contrast(1.08);
+  stroke-width:2!important;
+}
+body.day-mode .room text{
+  paint-order:stroke;
+  stroke:rgba(255,255,255,.88);
+  stroke-width:3px;
+  stroke-linejoin:round;
+}
+body.day-mode .sidebar .sb-row:hover,
+body.day-mode .sidebar .sb-row.active{
+  background:#e5f6f4;
+}
+body.day-mode .sb-lbl,
+body.day-mode .sr-name,
+body.day-mode .leg-l,
+body.day-mode .entry-opt,
+body.day-mode .tp-table td,
+body.day-mode .ip-desc,
+body.day-mode .ip-req{
+  color:#172b3d;
+}
+body.day-mode .entry-sel,
+body.day-mode .legend,
+body.day-mode .info-panel,
+body.day-mode .transport-panel,
+body.day-mode .srov-box,
+body.day-mode .z-btn{
+  background:rgba(255,255,255,.96);
+  border:1.5px solid rgba(0,95,89,.32);
+  box-shadow:0 12px 34px rgba(11,31,51,.18);
+}
+body.day-mode .info-panel{
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(236,246,250,.98));
+}
+body.day-mode .ip-close{
+  color:#0b1f33;
+  background:#eef4f8;
+  border-color:rgba(11,31,51,.22);
+}
+body.day-mode .btn-r,
+body.day-mode .route-tools-btn,
+body.day-mode .idle-btn{
+  color:#ffffff;
+  background:linear-gradient(135deg,#006b63,#004a45);
+  box-shadow:0 5px 16px rgba(0,95,89,.28);
+}
+body.day-mode .btn-r.off{color:#27394a;background:#ffffff;border:1.5px solid rgba(11,31,51,.24)}
+body.day-mode .ip-phone-call{color:#ffffff;background:#005f59}
+body.day-mode .toast{background:#ffffff;color:#005f59;border:2px solid #005f59;box-shadow:0 8px 24px rgba(11,31,51,.16)}
+body.day-mode .srov{background:rgba(240,246,250,.76)}
+body.day-mode .afl-labels{color:#536878}
+body.day-mode #routePath{stroke:#005f59;filter:drop-shadow(0 0 5px rgba(0,95,89,.35))}
+body.day-mode .route-marker .rm-label{stroke:rgba(255,255,255,.96)}
+
+/* Botón visible también en móvil para cambiar día/noche */
+@media(max-width:640px){
+  .theme-btn{display:inline-flex!important;align-items:center;justify-content:center;min-width:34px;min-height:32px;font-size:.82em}
+  body.day-mode .hdr-main{font-size:.95rem}
+  body.day-mode .filter-chip{font-size:.74em;padding:8px 12px}
+}
+
+
+/* === AJUSTE FINAL: CLARO POR DEFECTO + ACCESIBILIDAD ADULTO MAYOR === */
+body.day-mode{
+  --navy:#ffffff;
+  --navy-mid:#ffffff;
+  --navy-li:#edf3f8;
+  --white:#061728;
+  --plat:#061728;
+  --silver:#1f3447;
+  background:#ffffff;
+}
+body.day-mode .hdr-main,
+body.day-mode .tab,
+body.day-mode .filter-chip,
+body.day-mode .sb input,
+body.day-mode .sb-lbl,
+body.day-mode .sr-name,
+body.day-mode .ip-name,
+body.day-mode .ip-desc,
+body.day-mode .entry-opt,
+body.day-mode .leg-l{
+  font-weight:700;
+}
+body.day-mode .map-area{
+  background:linear-gradient(135deg,#ffffff,#f4f8fb 58%,#e7f0f7);
+}
+body.day-mode .tab,
+body.day-mode .filter-chip,
+body.day-mode .lang-btn,
+body.day-mode .a11y-btn,
+body.day-mode .theme-btn{
+  min-height:38px;
+  border-radius:12px;
+}
+body.day-mode .filter-chip{font-size:.78em;padding:9px 14px}
+body.day-mode .tab{font-size:.82em;padding:11px 18px}
+body.day-mode .sb{min-height:46px;border-radius:28px}
+body.day-mode .sb input{font-size:1em}
+body.day-mode .btn-r{min-height:42px;font-size:.86em;border-radius:24px}
+body.day-mode .route-tools-btn{min-height:42px;font-size:.82em;border-radius:24px}
+.a11y-hi{--fs:22px;filter:contrast(1.25)}
+.a11y-hi button,
+.a11y-hi .filter-chip,
+.a11y-hi .tab,
+.a11y-hi .btn-r{
+  min-height:46px;
+  padding:12px 18px;
+  font-size:1em;
+}
+.a11y-hi .sb input{font-size:1.08em}
+.a11y-hi .sb{min-height:52px}
+@media(max-width:640px){
+  body.day-mode .tab{font-size:.82em;padding:11px 14px}
+  body.day-mode .filter-chip{font-size:.82em;padding:10px 14px}
+  body.day-mode .theme-btn{min-width:42px;min-height:38px}
+}
+
 </style>
 </head>
-<body>
+<body class="day-mode">
 <header>
   <img src="data:image/png;base64,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" alt="HCM" class="hdr-logo">
   <div class="hdr-titles">
@@ -830,10 +1033,18 @@ function toggleTheme(){
   darkMode=!darkMode;
   document.body.classList.toggle('day-mode',!darkMode);
   $id('themeBtn').textContent=darkMode?'🌙':'☀️';
+  try{localStorage.setItem('hcm-map-theme',darkMode?'dark':'light');}catch(e){}
   showToast(darkMode?t('night_on'):t('day_on'));
 }
-// Auto theme on init
-(function(){darkMode=true;document.body.classList.remove('day-mode');$id('themeBtn').textContent='🌙';})();
+// Tema por defecto: claro. Si el usuario elige noche, se recuerda en este navegador.
+(function(){
+  let saved=null;
+  try{saved=localStorage.getItem('hcm-map-theme');}catch(e){}
+  darkMode=saved==='dark';
+  document.body.classList.toggle('day-mode',!darkMode);
+  const btn=$id('themeBtn');
+  if(btn)btn.textContent=darkMode?'🌙':'☀️';
+})();
 
 
 function svcSearchBlob(s){
@@ -1093,7 +1304,15 @@ function showRoute(id){
     arrow.setAttribute('fill','var(--teal)');
   }catch(e){}
   el.classList.add('show');arrow.classList.add('show');routeOn=true;
-  $id('infoPanel').classList.add('mini');updateRouteBtn();
+  // Al activar "Cómo llego", ocultamos el modal para que no tape el mapa,
+  // pero mantenemos la ruta, marcadores, servicio seleccionado y botón actualizado.
+  const panel=$id('infoPanel');
+  if(panel){
+    panel.classList.remove('show');
+    panel.classList.remove('mini');
+  }
+  updateRouteBtn();
+  showToast('Ruta activa en el mapa',1600);
 }
 function hideRoute(){
   const el=$id('routePath'),arrow=$id('routeArrow');
